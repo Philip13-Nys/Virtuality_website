@@ -186,10 +186,8 @@
     }
           .left-side img{
       flex-direction: column;
-      height: auto;
       width: 100%;
       align-items: center;
-      justify-content: center;
     }
 
     .left-side h1 {
