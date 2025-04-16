@@ -185,7 +185,7 @@
       padding: 30px 20px;
     }
     .left-side img{
-      max-width: 100%;
+      width: 100%;
       height: auto;
       align-items: center;
       justify-content: center;
