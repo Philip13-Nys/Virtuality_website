@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to top, #5dbc50, #ffffff);
+    
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+   
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to top, #5dbc50, #ffffff);
+    padding-top: 60px;
+    transition: 0.3s ease;
+    z-index: 1000;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.settings{
+  margin-top:90px;
+  padding-top: 250px;
+  word-spacing: 0.1em;
+}
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 15px 25px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #5dbc50;
+    border-radius: 20px;
+  }
+  
+ 
+  .sidebar.active {
+    left: 0;
+  }
+  
+  
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+   
+  }
+  
+  .sidebar.active ~ .main-content {
+    margin-left: 250px;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 20px;
+ 
+  }
+  
+  
+  .post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  .post-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .post-text {
+    margin: 10px 0;
+  }
+  
+  .post-actions button {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .people {
+    width: 260px;
+    padding: 20px;
+    background-color: white;
+    border-left: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+  }
+  
+  .person {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .person img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .connect {
+    background-color: #72dc58;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  /* From Uiverse.io by alexruix */ 
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-left: 55px;
+ }
+ 
+ .input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgb(186, 182, 182);
+  color: rgb(45, 42, 42);
+  transition: .3s ease;
+
+ }
+ 
+ .input::placeholder {
+  color: #3a3a3c;
+ }
+ 
+ .input:focus, input:hover {
+  outline: none;
+  border-color: rgba(234,76,137,0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+ }
+ 
+ .icon {
+  position: absolute;
+  left: 1rem;
+  fill: #1e1e20;
+  width: 1rem;
+  height: 1rem;
+ }
+
+ .topbar {
+  display: flex;
+  padding: 10px 20px;
+  gap: 20px;
+  justify-content: flex-end;
+
+  
+}
+
+.icons {
+  color: #5dbc50;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+
+}
+
+.icons:hover {
+  color: #00bcd4;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right-section {
+    border-radius: 50px 50px 0 0;
+    padding-top: 20px;
+    box-shadow: none;
+  }
+
+  .left-section {
+    padding: 40px 20px;
+  }
+
+  .left-section h1 {
+    font-size: 28px;
+  }
+
+  .left-section p {
+    font-size: 16px;
+  }
+
+  .form-box {
+    padding: 30px 20px;
+  }
+  .main-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+ 
+ 

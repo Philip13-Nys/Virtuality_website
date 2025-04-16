@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+    body {
+        width: 100%;
+        background: linear-gradient(to top, #5dbc50, #ffffff);
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        min-height: 100vh;
+      }
+  
+  .container {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1200px;
+    height: 650px ;
+    margin: auto;
+    border-radius: 25px;
+    padding: 40px;
+  }
+
+  .right-section img {
+    margin-top: 50px;
+    margin-right: 80px;
+  }
+ 
+  .left-section {
+    flex: 1;
+  }
+  
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+  
+  .progress {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+  }
+  
+  .step {
+    width: 40px;
+    height: 8px;
+    border-radius: 10px;
+    background: #e0e0e0;
+  }
+  
+  .step.filled {
+    background: #4caf50;
+  }
+  
+  .step-text {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #444;
+    margin-left: 30px;
+  }
+  
+  h2 {
+    color: #2e7d32;
+    font-size: 40px;
+
+    margin-left: 30px;
+  }
+
+  .form-box{
+    width: 400px;
+    max-width: 400px;
+    text-align: center;
+    margin-left: 50px;
+  }
+  form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 30px;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+    border: 2px solid #5dbc50;
+    margin-left: 20px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .5);
+  }
+  
+
+  button {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+  }
+  
+  .buttons button{
+   
+    background: white;
+    color: #555;
+    margin-left: 0%;
+    border: 2px solid #5dbc50;
+  }
+  .button button{
+   
+    background: #5dbc50;
+    color: white;
+    margin-left: 180px;
+   align-items: center;
+    border: 2px solid #5dbc50;
+  }
+
+  @media (max-width: 900px) {
+
+    .container {
+      flex-direction: column;
+      height: auto;
+      width: auto;
+    }
+  
+    .main-content{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .body{
+      flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+    .form-box{
+      flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+  }
+
+  
+  
