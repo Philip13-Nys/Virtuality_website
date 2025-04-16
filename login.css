@@ -188,6 +188,7 @@
       flex-direction: column;
       width: 100%;
       align-items: center;
+      margin-right: 30px;
     }
 
     .left-side h1 {
