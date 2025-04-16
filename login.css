@@ -161,6 +161,8 @@
   @media (max-width: 600px) {
     .container {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   
     .right-section {
@@ -194,7 +196,7 @@
     .left-side h1 {
       flex-direction: column;
       height: auto;
-      width: 100%;
+      width: auto;
       align-items: center;
       justify-content: center;
     }
