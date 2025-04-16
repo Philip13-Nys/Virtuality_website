@@ -31,7 +31,61 @@ body {
     margin: 2rem auto;
     padding: 0 1rem;
   }
+   .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to top, #5dbc50, #ffffff);
+    padding-top: 60px;
+    transition: 0.3s ease;
+    z-index: 1000;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.settings{
+  margin-top:90px;
+  padding-top: 250px;
+  word-spacing: 0.1em;
+}
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 15px 25px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
   
+  .sidebar a:hover {
+    background-color: #5dbc50;
+    border-radius: 20px;
+  }
+  
+ 
+  .sidebar.active {
+    left: 0;
+  }
+  
+  
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+   
+  }
+  
+  .sidebar.active ~ .main-content {
+    margin-left: 250px;
+  }
   section {
     margin-bottom: 3rem;
   }
