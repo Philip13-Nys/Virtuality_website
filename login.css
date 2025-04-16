@@ -184,4 +184,19 @@
     .form-box {
       padding: 30px 20px;
     }
+          .left-side img{
+      flex-direction: column;
+      height: auto;
+      width: auto;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left-side h1 {
+      flex-direction: column;
+      height: auto;
+      width: auto;
+      align-items: center;
+      justify-content: center;
+    }
   }
