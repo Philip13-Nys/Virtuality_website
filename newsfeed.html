@@ -203,7 +203,8 @@
     
 
   
-    <aside class="people">
+      <button class="toggleSidebar" onclick="toggleRightSidebar()">+</button>
+    <aside class="rightSidebar right" id="rightSidebar">
       <h3>People you may know</h3>
       <div class="person">
         <img src="T.png" alt="User" />
@@ -261,13 +262,19 @@
         </div>
       </div>
     </aside>
+  </div>
      
   
   </div>
+  
 
   <script>
     function toggleSidebar() {
       document.getElementById("sidebar").classList.toggle("active");
+    }
+    function toggleRightSidebar() {
+    const sidebar = document.getElementById('rightSidebar');
+    sidebar.classList.toggle('hidden');
     }
   </script>
 </body>
