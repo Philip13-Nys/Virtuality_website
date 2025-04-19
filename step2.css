@@ -1,138 +1,158 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  width: 100%;
+  background: linear-gradient(to top, #5dbc50, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    body {
-        width: 100%;
-        background: linear-gradient(to top, #5dbc50 0%, #ffffff 50%, #ffffff 100%);
-        display: flex;
-        justify-content: left;
-        align-items: left;
-        min-height: 100vh;
-      }
-  
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.left-side, .right-side {
+  flex: 1;
+  padding: 10px;
+}
+
+.left-side {
+  background: #fff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+}
+
+.left-side h1 {
+  font-size: 5rem;
+  color: #333;
+}
+
+.left-side img{
+  width: 400px;
+  height: 300px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.left-side h1 span {
+  color: #28a745;
+}
+
+.left-side p {
+  margin: 10px;
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 0%;
+}
+
+.logo {
+  max-width: 700px;
+  height:200px;
+
+}
+
+.right-side {
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.form-box {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+form input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.buttons a{
+  text-decoration: none;
+  color: black;
+  margin-top: 30px;
+}
+
+
+
+
+@media (max-width: 600px) {
   .container {
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-    display: flex;
-    background-color: white;
-    justify-content: center;
-    align-items: flex-start;
-    width: 1200px;
-    height: 650px ;
-    margin: auto;
-    border-radius: 25px;
-    padding: 40px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .right-section img {
-    margin-top: 50px;
-    margin-right: 80px;
+  .right-section {
+    border-radius: 50px 50px 0 0;
+    padding-top: 20px;
+    box-shadow: none;
   }
- 
+
   .left-section {
-    flex: 1;
-  }
-  
-  
-  .logo {
-    width: 100px;
-    margin-bottom: 5px;
-    margin-top: 0;
-  }
-  
-  .progress {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 5px;
-    margin-left: 30px;
-  }
-  
-  .step {
-    width: 40px;
-    height: 8px;
-    border-radius: 10px;
-    background: #e0e0e0;
-  }
-  
-  .step.filled {
-    background: #4caf50;
-  }
-  
-  .step-text {
-    margin-bottom: 20px;
-    font-weight: 500;
-    color: #444;
-    margin-left: 30px;
-  }
-  
-  h2 {
-    color: #2e7d32;
-    font-size: 40px;
-
-    margin-left: 30px;
+    padding: 40px 20px;
   }
 
-  .form-box{
-    width: 400px;
-    max-width: 400px;
-    text-align: center;
-    margin-left: 50px;
+  .left-section h1 {
+    font-size: 28px;
   }
-  form input {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 30px;
-    border: 2px solid #ccc;
-    font-size: 1rem;
-    border: 2px solid #5dbc50;
-    margin-left: 20px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, .5);
-  }
-  
 
-  button {
-    padding: 12px 30px;
-    border-radius: 30px;
+  .left-section p {
     font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s ease;
-  }
-  
-  .buttons button{
-   
-    background: white;
-    color: #555;
-    margin-left: 0%;
-    border: 2px solid #5dbc50;
-  }
-  .button button{
-   
-    background: #5dbc50;
-    color: white;
-    margin-left: 180px;
-   align-items: center;
-    border: 2px solid #5dbc50;
-  }
-  @media (max-width: 900px) {
-    .container {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .main-content{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
   }
 
+  .form-box {
+    padding: 30px 20px;
+  }
+  .left-side img{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
 
-  
-  
+  .left-side h1 {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
