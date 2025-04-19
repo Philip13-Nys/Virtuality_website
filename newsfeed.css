@@ -199,7 +199,7 @@
   width: 500px;
   justify-content: center;
   margin-bottom: 10px;
-  margin-left: 95px;
+  margin-left: 110px;
  }
  
  .input {
@@ -255,6 +255,26 @@
 
 .icons:hover {
   color: #00bcd4;
+}
+
+.floating-post-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #5dbc50; /* A nice blue-violet */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floating-post-icon:hover {
+  background-color: #3730a3; /* Slightly darker on hover */
 }
 
 @media (max-width: 900px) {
