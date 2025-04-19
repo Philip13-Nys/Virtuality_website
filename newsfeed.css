@@ -111,7 +111,7 @@
     color: #555;
   }
   
-  .people {
+    .people {
     width: 260px;
     padding: 20px;
     background-color: white;
@@ -125,11 +125,53 @@
     justify-content: center;
     margin-top: 70px;
   }
+  .rightSidebar{
+    position: fixed;
+    overflow-y: auto;
+     top: 0;
+     left: -250px; 
+     width: 250px;
+     height: 100%;
+     background: white;
+     padding-top: 60px;
+     transition: 0.3s ease;
+     z-index: 1000;
+     font-weight: lighter;
+     font-family: 'Poppins', sans-serif;
+   }
+
+   .rightSidebar h3{
+    margin-top: 20px;
+   }
+   .toggleSidebar {
+    top: 20px;
+    position: fixed;
+    z-index: 1100;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+    height: 40px;
+    margin-left: 70px ;
+   
+  }
+
+  .right {
+    border-left: 1px solid #ccc;
+    transform: translateX(0); /* visible by default */
+  }
+  
+  .right.hidden {
+    transform: translateX(100%); /* slide out of view */
+  }
   
   .person {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
   
   .person img {
@@ -157,7 +199,7 @@
   width: 500px;
   justify-content: center;
   margin-bottom: 10px;
-  margin-left: 55px;
+  margin-left: 95px;
  }
  
  .input {
