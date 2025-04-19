@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="live.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+  
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <div class="sidebar" id="sidebar">
+    
+      
+      <a href="newsfeed.html">Home</a>
+      <a href="groups.html">Community Groups</a>
+      <a class="active">Live Events</a>
+      <a href="booths">Company Booths</a>
+
+        <div class="settings">
+            <a href ="#">Setting</a>
+            <a href ="index.html">Log out</a>
+            <a href ="#">About us</a>
+            <a href ="#">Feedback</a>
+        </div>
+    
+    </div>
+  
+   
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+            <input placeholder="Search" type="search" class="input">
+            <div class="topbar">
+                <a href="#" class="icons"><i class="fas fa-bell"></i></a>      <!-- Notification -->
+                 <a href="#" class="icons"><i class="fas fa-envelope"></i></a>  <!-- Message -->
+                <a href="#" class="icons"><i class="fas fa-user-circle"></i></a> <!-- Profile -->
+            </div>
+           
+        </div>
+      
+        <header class="header">
+          <h1>Live Events</h1>
+        </header>
+      
+        <div class="event-list">
+            <button class="go-live-btn">🔴 Go Live</button>
+            <div class="grid-container">
+                <div class="event live">
+                    <h2 class="link"><a href="#"> Workshops about the creation of resume and curriculum vitae</a></h2>
+                    <p>Time: 7:00 PM</p>
+                    <span class="status">LIVE</span>
+                </div>
+
+                <div class="event live">
+                    <h2 class="link"><a href="#"> Google Careers OnAir</a></h2>
+                    <p>Time: 7:00 PM</p>
+                    <span class="status">LIVE</span>
+                </div>
+                
+                <div class="event live">
+                    <h2 class="link"><a href="#">Lunch n' Learn</a></h2>
+                    <p>Time: 7:00 PM</p>
+                    <span class="status">LIVE</span>
+                </div>
+        
+                <div class="event upcoming">
+                    <h2 class="link"><a href="#">Q&A Sessions</a></h2>
+                    <p>Time: 9:00 PM</p>
+                    <span class="status">Upcoming</span>
+                </div>
+                
+                <div class="event upcoming">
+                    <h2 class="link"><a href="#">Learniong Circle</a></h2>
+                    <p>Time: 10:00 PM</p>
+                    <span class="status">Upcoming</span>
+                </div>
+
+                <div class="event upcoming">
+                    <h2 class="link"><a href="#">Career Kickstart Live!</a></h2>
+                    <p>Tuesday, Time: 7:00 am</p>
+                    <span class="status">Upcoming</span>
+                </div>
+
+                <div class="event upcoming">
+                    <h2 class="link"><a href="#">Internship Opportunities Live Forum</a></h2>
+                    <p>Monday, Time: 7:00 am</p>
+                    <span class="status">Upcoming</span>
+                </div>
+
+                <div class="event upcoming">
+                    <h2 class="link"><a href="#">Lakbay Internship: Live Opportunities</a></h2>
+                    <p>Monday, Time: 9:00 am</p>
+                    <span class="status">Upcoming</span>
+                </div>
+        
+                <div class="event ended">
+                    <h2 class="link"><a href="#">Interview tips sharing</a></h2>
+                    <p>Time: 5:00 PM</p>
+                    <span class="status">Ended</span>
+                </div>
+
+                <div class="event ended">
+                    <h2 class="link"><a href="#">Accenture Internship Program Info Sessions</a></h2>
+                    <p>Time: 4:00 PM</p>
+                    <span class="status">Ended</span>
+                </div>
+             
+            </div>
+          
+        </div>
+    </main>
+     
+
+    
+
+    <!-- Right Sidebar -->
+    <button class="toggleSidebar" onclick="toggleRightSidebar()">+</button>
+    <aside class="rightSidebar right" id="rightSidebar">
+      <h3>People you may know</h3>
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+     
+  
+  </div>
+  
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+    function toggleRightSidebar() {
+    const sidebar = document.getElementById('rightSidebar');
+    sidebar.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
