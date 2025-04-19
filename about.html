@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About us</title>
+  <link rel="stylesheet" href="about.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+  
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <div class="sidebar" id="sidebar">
+    
+      
+      <a href="newsfeed.html">Home</a>
+      <a href="groups.html">Community Groups</a>
+      <a class="active">Live Events</a>
+      <a href="booths">Company Booths</a>
+
+        <div class="settings">
+            <a href ="#">Setting</a>
+            <a href ="index.html">Log out</a>
+            <a href ="#">About us</a>
+            <a href ="#">Feedback</a>
+        </div>
+    
+    </div>
+  
+   
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="group">
+            
+            <div class="topbar">
+                <a href="#" class="icons"><i class="fas fa-bell"></i></a>      <!-- Notification -->
+                <a href="#" class="icons"><i class="fas fa-envelope"></i></a>  <!-- Message -->
+                <a href="#" class="icons"><i class="fas fa-user-circle"></i></a> <!-- Profile -->
+            </div>
+           
+        </div>
+      
+        <header class="header">
+          <h1>About us</h1>
+        </header>
+        <section class="about-us">
+            <div class="about-content">
+              <h2>Who we are?</h2>
+              <p>
+                Virtuality, an internship website and virtual setup with 
+                realistic settings such as featuring events, booths, and groups 
+                that aim to help graduating students, particularly those 
+                attending universities without affiliated organizations to 
+                connect with companies and find internship programs with ease.
+              </p>
+          
+              <div class="about-grid">
+                <div class="about-item">
+                  <h3>🌍 Our Vision</h3>
+                  <p>Virtuality, is a service-based website providing internship 
+                    opportunities for graduating college students through 
+                    connection it gives on different companies  to students.</p>
+                </div>
+                <div class="about-item">
+                  <h3>🤝 Our Mission</h3>
+                  <p>Virtuality, is a service-based website providing internship 
+                    opportunities for graduating college students through 
+                    connection it gives on different companies  to students.</p>
+                </div>
+
+                
+              
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <img src="Virtuality.png" alt="logo">
+              <div class="footer-logo">
+                <h3>Virtuality</h3>
+                <p>A virtual setup website with reality function</p>
+              </div>
+
+              <div class="time">
+                <h4>Business Hours</h4>
+                <p>Monday to Saturday, 7:00am to 5:00pm</p>
+                <p>Sunday, closed</p>
+              </div>
+
+              <div class="footer-links">
+                <h4>Message Us</h4>
+                <ul>
+                  09464162793
+                  <p><a href="#">virtuality@gmail.com</a></p>
+                  Virtuality
+                </ul>
+              </div>
+              
+              <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <div class="social-icons">
+                            <li><a href="https://www.facebook.com/share/19YpEmMPhG/?mibextid=wwXIfr">Facebook</a></li> 
+                            <li><a href="#">Twitter</a></li> 
+                            <li><a href="#">Intagram</a></li> 
+                        </div>
+                    </ul>
+              </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Virtuality</p>
+              </div>
+          
+        </footer>
+          
+  
+    </main>
+     
+
+    
+
+    <!-- Right Sidebar -->
+    <button class="toggleSidebar" onclick="toggleRightSidebar()">+</button>
+    <aside class="rightSidebar right" id="rightSidebar">
+      <h3>People you may know</h3>
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+
+      <div class="person">
+        <img src="T.png" alt="User" />
+        <div>
+          <strong>Pepito Manaloto</strong>
+          <p>Full Time Businessman</p>
+          <button class="connect">Connect</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+     
+  
+  </div>
+  
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+    function toggleRightSidebar() {
+    const sidebar = document.getElementById('rightSidebar');
+    sidebar.classList.toggle('hidden');
+    }
+    function closeFooterPopup() {
+    document.getElementById("footerPopup").style.display = "none";
+    }
+  </script>
+</body>
+</html>
