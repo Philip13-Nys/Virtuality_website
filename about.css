@@ -78,112 +78,6 @@ word-spacing: 0.1em;
   padding: 20px;
 
 }
-
-.people {
-  width: 260px;
-  padding: 20px;
-  background-color: white;
-  border-left: 1px solid #eee;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-  border-radius: 15px;
-  margin: auto;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 70px;
-}
-.rightSidebar{
-  position: fixed;
-  overflow-y: auto;
-   top: 0;
-   left: -250px; 
-   width: 250px;
-   height: 100%;
-   background: white;
-   padding-top: 60px;
-   transition: 0.3s ease;
-   z-index: 1000;
-   font-weight: lighter;
-   font-family: 'Poppins', sans-serif;
-}
-
- .rightSidebar h3{
-  margin-top: 20px;
- }
- .toggleSidebar {
-  top: 20px;
-  position: fixed;
-  z-index: 1100;
-  color: black;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 20px;
-  height: 40px;
-  margin-left: 70px ;
- 
-}
-
-.right {
-  border-left: 1px solid #ccc;
-  transform: translateX(0); /* visible by default */
-}
-
-.right.hidden {
-  transform: translateX(100%); /* slide out of view */
-}
-
-
-.person {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.person img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.connect {
-  background-color: #72dc58;
-  border: none;
-  padding: 5px 10px;
-  color: white;
-  border-radius: 12px;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-/* From Uiverse.io by alexruix */ 
-
-
-.topbar {
-  display: flex;
-  padding: 10px 20px;
-  gap: 20px;
-  justify-content: flex-end;
-}
-
-
-
-.icons {
-  color: #5dbc50;
-  font-size: 24px;
-  text-decoration: none;
-  transition: color 0.3s;
-  
-  }
-
-.icons:hover {
-color: #00bcd4;
-}
-
-
 .header {
 background-color: #222;
 color: #fff;
@@ -252,13 +146,14 @@ border-radius: 30px;
   margin-top: 20px;
   justify-content: flex-start;
   box-shadow: 0 5px 30px rgba(0, 0, 0, .5);
+
 }
 
 .footer img{
   max-width: 700px;
   height:200px;
-  justify-content: center;
- 
+ align-items: center;
+ justify-content: center;
 }
 
 .footer-container {
@@ -270,6 +165,7 @@ border-radius: 30px;
   font-size: 17px;
   align-items: center;
   margin-bottom: 20px;
+  
 }
 
 .footer-logo h3 {
@@ -316,9 +212,6 @@ border-radius: 30px;
   flex-direction: column;
 }
 
-.form-box {
-  padding: 30px 20px;
-}
 .main-content{
   display: flex;
   flex-wrap: wrap;
