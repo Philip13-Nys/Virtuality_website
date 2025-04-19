@@ -6,53 +6,59 @@
   <title>Community Groups</title>
   <link rel="stylesheet" href="groups.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-  <header>
-     <div class="group">
-            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-            <input placeholder="Search" type="search" class="input">
-            <div class="topbar">
-                <a href="#" class="icons"><i class="fas fa-bell"></i></a>      <!-- Notification -->
-                 <a href="#" class="icons"><i class="fas fa-envelope"></i></a>  <!-- Message -->
-                <a href="#" class="icons"><i class="fas fa-user-circle"></i></a> <!-- Profile -->
-            </div>
-           
-        </div>
-    <h1>Community Groups</h1>
-    <p>Connecting Students, Building Unity</p>
-  </header>
-   <div class="container">
-    
-
+    <body>
+        <div class="container">
+        <!-- Sidebar -->
+        
         <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-
+    
         <div class="sidebar" id="sidebar">
         
-          
-          <a href="newsfeed.html">Home</a>
-          <a class="active">Community Groups</a>
-          <a href="live.html">Live Events</a>
-          <a href="booths.html">Company Booths</a>
+            
+            <a href="newsfeed.html">Home</a>
+            <a class="active">Community Groups</a>
+            <a href="live.html">Live Events</a>
+            <a href="booths">Company Booths</a>
     
-        <div class="settings">  
-          <a href ="setting.html">Setting</a>
-          <a href ="about.html">About us</a>
-          <a href ="feedback.html">Feedback</a>
-          <a href ="index.html">Log out</a>
+            <div class="settings">
+                <a href ="#">Setting</a>
+                <a href ="index.html">Log out</a>
+                <a href ="#">About us</a>
+                <a href ="#">Feedback</a>
+            </div>
+        
         </div>
-    </div>
-    <div class="main-content">
- 
-
-        <section id="groups">
-   
+        
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="group">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                <input placeholder="Search" type="search" class="input">
+                <div class="topbar">
+                    <a href="#" class="icons"><i class="fas fa-bell"></i></a>      <!-- Notification -->
+                    <a href="#" class="icons"><i class="fas fa-envelope"></i></a>  <!-- Message -->
+                    <a href="#" class="icons"><i class="fas fa-user-circle"></i></a> <!-- Profile -->
+                </div>
+                
+            </div>
+            
+            <header class="header">
+                <h1>Community Groups</h1>
+                <span>Connecting Students, Building Unity</span>
+            </header>
+            <div class="content">
+                <button class="floating-post-icon">
+                    ➕
+                  </button>
+            
                 <div class="Click">
-                    <div class="groups">
+                    <div class="grid-container">
                         <div class="group-card">
                             <h3 class="link"> 
-                                <a href="#">Information Technology Group</a> 
+                            <a href="#">Information Technology Group</a> 
                             </h3>
                             <p>Share tips, plants, and green your block with fellow garden lovers.</p>
                         </div>
@@ -62,7 +68,7 @@
                         </div>
                         <div class="group-card">
                             <h3>Computer Engineering Group </h3>
-                                <p>Help out with local cleanups, food drives, and outreach projects.</p>
+                            <p>Help out with local cleanups, food drives, and outreach projects.</p>
                         </div>
                         <div class="group-card">
                             <h3>Civil Engineering Group </h3>
@@ -100,18 +106,19 @@
                             <h3>Hospitality Management Group </h3>
                             <p>Help out with local cleanups, food drives, and outreach projects.</p>
                         </div>
-            
+                    
                     </div>
                 </div>
-        
-        </section>
+                
+               
 
-    </div>
+            </div>
+        </main>
 
-<script>
-        function toggleSidebar() {
-          document.getElementById("sidebar").classList.toggle("active");
-        }
-      </script>
-</body>
+        <script>
+            function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            }
+        </script>
+    </body>
 </html>
