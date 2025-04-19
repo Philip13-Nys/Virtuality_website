@@ -45,7 +45,10 @@
   .left-side img{
     width: 400px;
     height: 300px;
-    margin-left: 60px;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
   }
   
   .left-side h1 span {
