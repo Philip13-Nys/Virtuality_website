@@ -1,0 +1,199 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      margin: 0;
+      transition: background 0.3s, color 0.3s;
+      background-color: #1f1f1f;
+    }
+
+    .settings-container {
+      max-width: 600px;
+      margin: auto;
+      background: #585555;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s, box-shadow 0.3s;
+      
+    }
+    .setting-group {
+      margin-bottom: 20px;
+    }
+
+    .setting-group a{
+       text-decoration: none;
+       color: #000;
+       margin-bottom: 20px;
+      }  
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    input[type="text"], input[type="email"], select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      color: #000;
+      transition: background 0.3s, color 0.3s;
+    }
+    .save-button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+    .save-button {
+      background-color: #222;
+      color: white;
+    }
+    .save-button:hover {
+      background-color: black;
+    }
+    .feedback-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        font-family: Arial, sans-serif;
+      }
+      
+      .feedback-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      label {
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+      
+      .submit-button {
+        width: 100%;
+        padding: 14px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      
+      .submit-button:hover {
+        background-color: #45a049;
+      }
+
+      .rating-container {
+        max-width: 400px;
+        margin: 50px auto;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .rating-container h2{
+        color: white;
+      }
+      
+      .stars {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-size: 40px;
+        color: #ccc;
+        cursor: pointer;
+      }
+      
+      .star.hover,
+      .star.selected {
+        color: gold;
+      }
+      
+      #rating-text {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      
+      .sidebar {
+        position: fixed;
+        overflow-y: auto;
+        top: 0;
+        left: -250px; 
+        width: 250px;
+        height: 100%;
+        background: rgb(143, 136, 136);
+        padding-top: 60px;
+        transition: 0.3s ease;
+        z-index: 1000;
+        font-weight: lighter;
+        font-family: 'Poppins', sans-serif;
+      }
+    
+    .settings{
+      margin-top:70px;
+      padding-top: 250px;
+      word-spacing: 0.1em;
+    }
+      .sidebar a {
+        display: block;
+        color: black;
+        padding: 15px 25px;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      
+      .sidebar a:hover {
+        background-color: #5dbc50;
+        border-radius: 20px;
+      }
+      
+     
+      .sidebar.active {
+        left: 0;
+      }
+      
+      
+      .toggle-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1100;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 20px;
+       
+      }
+      
+      .sidebar.active ~ .main-content {
+        margin-left: 250px;
+      }
+
+
+
