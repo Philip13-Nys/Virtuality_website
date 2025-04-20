@@ -8,125 +8,127 @@
     <link rel="icon" href="Virtuality.png" type="Image/svg+xml">
     </head>
     <body>
-        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-
-        <div class="sidebar" id="sidebar">
+        <div class="container">
+                <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
         
-          
-             <a href="newsfeed.html">Home</a>
-              <a href="groups.html">Community Groups</a>
-              <a href="live.html">Live Events</a>
-              <a href="booths.html">Company Booths</a>
+                <div class="sidebar" id="sidebar">
+                
+                  
+                     <a href="newsfeed.html">Home</a>
+                      <a href="groups.html">Community Groups</a>
+                      <a href="live.html">Live Events</a>
+                      <a href="booths.html">Company Booths</a>
+                
+                    <div class="settings">  
+                      <a class ="active">Setting</a>
+                      <a href ="about.html">About us</a>
+                      <a href ="index.html">Log out</a>
+                    </div>
+                
+                </div>
+                <div class="settings-container">
         
-            <div class="settings">  
-              <a class ="active">Setting</a>
-              <a href ="about.html">About us</a>
-              <a href ="index.html">Log out</a>
-            </div>
+                <h2>Account Settings</h2>
         
-        </div>
-        <div class="settings-container">
-
-        <h2>Account Settings</h2>
-
-            <div class="setting-group">
-                <label for="username">Username</label>
-                <p>Yuichi</p>
-            </div>
+                    <div class="setting-group">
+                        <label for="username">Username</label>
+                        <p>Yuichi</p>
+                    </div>
+                
+                    <div class="setting-group">
+                        <label for="email">Your Email</label>
+                        <p>yuichiphynx13@gmail.com</p>
+                    </div>
         
-            <div class="setting-group">
-                <label for="email">Your Email</label>
-                <p>yuichiphynx13@gmail.com</p>
-            </div>
-
-            <div class="setting-group">
-                <label for="location">Location</label>
-                <p>Kumintang Ibaba, Batangas City, Batangas</p>
-            </div>
-
-            <div class="setting-group">
-                <label for="Security">Security</label>
-                <a href="#"><p>Change password</p></a>
-            </div>
-
-            <div class="setting-group">
-                <label for="Subscription">Premium Subscription</label>
-                <select id="plans">
-                    <option>None</option>
-                    <option>Virtuality Basic Career Access (free)</option>
-                    <option>Virtuality Basic Premium Access (₱49/mon)</option>
-                </select>
-                <a href="#"><p>Subscribe</p></a>
-            </div>
-
-            <div class="setting-group">
-                <label for="language">Preferred Language</label>
-                <select id="language">
-                    <option>English</option>
-                    <option>Spanish</option>
-                    <option>French</option>
-                    <option>Arabic</option>
-                    <option>Korean</option>
-                    <option>German</option>
-                    <option>Russian</option>
-                    <option>Malay</option>
-                    <option>Japanese</option>
-                </select>
-            </div>
-
-            <div class="setting-group">
-                <label for="management">Acount Management</label>
-                <select id="language">
-                    <option>None</option>
-                    <option>Delete Account</option>
-                    <option>Deactivate Account</option>
-                </select>
-            </div>
-
-            <div class="setting-group">
-                <label for="help center"><a href="#">Help Center</a></label>
-            </div>
-
-            <a href="newsfeed.html">
-                <button class="save-button">Save Changes</button>
-            </a>
-        </div>
-
-        <div class="feedback-container">
-            <h2>We'd love your feedback!</h2>
-            
-            <form action="#" method="post">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-              </div>
-          
-              <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-              </div>
-          
-              <div class="form-group">
-                <label for="message">Feedback</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your feedback..." required></textarea>
-              </div>
-          
-              <button type="submit" class="submit-button">Submit Feedback</button>
-            </form>
-        </div>
-
-        <div class="rating-container">
-            <h2>Rate Your Experience</h2>
-            
-            <div class="stars">
-              <span class="star" data-value="1">&#9733;</span>
-              <span class="star" data-value="2">&#9733;</span>
-              <span class="star" data-value="3">&#9733;</span>
-              <span class="star" data-value="4">&#9733;</span>
-              <span class="star" data-value="5">&#9733;</span>
-            </div>
-          
-            <p id="rating-text"></p>
+                    <div class="setting-group">
+                        <label for="location">Location</label>
+                        <p>Kumintang Ibaba, Batangas City, Batangas</p>
+                    </div>
+        
+                    <div class="setting-group">
+                        <label for="Security">Security</label>
+                        <a href="#"><p>Change password</p></a>
+                    </div>
+        
+                    <div class="setting-group">
+                        <label for="Subscription">Premium Subscription</label>
+                        <select id="plans">
+                            <option>None</option>
+                            <option>Virtuality Basic Career Access (free)</option>
+                            <option>Virtuality Basic Premium Access (₱49/mon)</option>
+                        </select>
+                        <a href="#"><p>Subscribe</p></a>
+                    </div>
+        
+                    <div class="setting-group">
+                        <label for="language">Preferred Language</label>
+                        <select id="language">
+                            <option>English</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                            <option>Arabic</option>
+                            <option>Korean</option>
+                            <option>German</option>
+                            <option>Russian</option>
+                            <option>Malay</option>
+                            <option>Japanese</option>
+                        </select>
+                    </div>
+        
+                    <div class="setting-group">
+                        <label for="management">Acount Management</label>
+                        <select id="language">
+                            <option>None</option>
+                            <option>Delete Account</option>
+                            <option>Deactivate Account</option>
+                        </select>
+                    </div>
+        
+                    <div class="setting-group">
+                        <label for="help center"><a href="#">Help Center</a></label>
+                    </div>
+        
+                    <a href="newsfeed.html">
+                        <button class="save-button">Save Changes</button>
+                    </a>
+                </div>
+        
+                <div class="feedback-container">
+                    <h2>We'd love your feedback!</h2>
+                    
+                    <form action="#" method="post">
+                      <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="message">Feedback</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your feedback..." required></textarea>
+                      </div>
+                  
+                      <button type="submit" class="submit-button">Submit Feedback</button>
+                    </form>
+                </div>
+        
+                <div class="rating-container">
+                    <h2>Rate Your Experience</h2>
+                    
+                    <div class="stars">
+                      <span class="star" data-value="1">&#9733;</span>
+                      <span class="star" data-value="2">&#9733;</span>
+                      <span class="star" data-value="3">&#9733;</span>
+                      <span class="star" data-value="4">&#9733;</span>
+                      <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                  
+                    <p id="rating-text"></p>
+                </div>
         </div>
         <script>
             function toggleSidebar() {
