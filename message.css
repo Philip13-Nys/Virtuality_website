@@ -1,11 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #2f3136; /* Dark background similar to Discord */
-    color: #dcddde; /* Light gray text */
+    background-color: #2f3136; 
+    color: #dcddde; 
     display: flex;
     height: 100vh;
-    overflow: hidden; /* Prevent scrolling on the body */
+    transition: background 0.3s, color 0.3s;
+    background-color: #1f1f1f;
 }
 
 .chat-container {
@@ -14,16 +15,19 @@ body {
     height: 100%;
 }
 
-/* Left Sidebar */
+
 .left-sidebar {
     width: 70px;
-    background-color: #202225; /* Darker sidebar */
+    background-color: #202225;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    position: relative; /* For bottom icons */
+    position: relative; 
+    overflow-y: auto;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
 }
 
 .profile-icon img {
@@ -46,7 +50,7 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #36393f; /* Server icon background */
+    background-color: #36393f; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,8 +63,8 @@ body {
 }
 
 .server-icon:hover, .server-icon.active {
-    border-radius: 30%; /* Squarer on hover/active */
-    background-color: #5dbc50; /* Discord blue */
+    border-radius: 30%; 
+    background-color: #5dbc50; 
     color: white;
    
 }
@@ -84,10 +88,9 @@ body {
     color: #dcddde;
 }
 
-/* Middle Column (Chats List) */
 .middle-column {
     width: 280px;
-    background-color: #2f3136; /* Same as body background */
+    background-color: #2f3136; 
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -123,23 +126,23 @@ body {
 
 .chat-list {
     flex-grow: 1;
-    overflow-y: auto; /* Scroll for chat list */
-    padding-right: 5px; /* Space for scrollbar */
+    overflow-y: auto; 
+    padding-right: 5px; 
 }
 
-/* Custom scrollbar for chat-list */
+
 .chat-list::-webkit-scrollbar {
     width: 8px;
 }
 
 .chat-list::-webkit-scrollbar-track {
-    background: #2f3136; /* Dark background for track */
+    background: #2f3136; 
 }
 
 .chat-list::-webkit-scrollbar-thumb {
-    background-color: #40444b; /* Darker thumb */
+    background-color: #40444b; 
     border-radius: 4px;
-    border: 2px solid #2f3136; /* Border to match background */
+    border: 2px solid #2f3136; 
 }
 
 .chat-item {
@@ -157,7 +160,7 @@ body {
 }
 
 .chat-item.active {
-    background-color: #3a3f45; /* Active chat background */
+    background-color: #3a3f45;
 }
 
 .chat-item img {
@@ -172,7 +175,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    overflow: hidden; /* Hide overflow text */
+    overflow: hidden;
 }
 
 .chat-name {
@@ -191,10 +194,10 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Main Chat Area */
+
 .main-chat-area {
     flex-grow: 1;
-    background-color: #36393f; /* Slightly lighter background for chat */
+    background-color: #36393f; 
     display: flex;
     flex-direction: column;
 }
@@ -204,7 +207,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #2f3136; /* Darker header */
+    background-color: #2f3136;
     border-bottom: 1px solid #202225;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -240,25 +243,25 @@ body {
 .chat-messages {
     flex-grow: 1;
     padding: 20px;
-    overflow-y: auto; /* Scroll for messages */
+    overflow-y: auto; 
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* Custom scrollbar for chat-messages */
+
 .chat-messages::-webkit-scrollbar {
     width: 8px;
 }
 
 .chat-messages::-webkit-scrollbar-track {
-    background: #36393f; /* Dark background for track */
+    background: #36393f; 
 }
 
 .chat-messages::-webkit-scrollbar-thumb {
-    background-color: #40444b; /* Darker thumb */
+    background-color: #40444b; 
     border-radius: 4px;
-    border: 2px solid #36393f; /* Border to match background */
+    border: 2px solid #36393f; 
 }
 
 .message-group {
@@ -275,7 +278,7 @@ body {
 }
 
 .message-content {
-    background-color: #40444b; /* Message bubble background */
+    background-color: #40444b;
     padding: 10px 15px;
     border-radius: 8px;
     max-width: 70%;
@@ -286,9 +289,9 @@ body {
 
 .sender-name {
     font-weight: bold;
-    color: #5dbc50; /* Discord blue for names */
+    color: #5dbc50; 
     margin-bottom: 5px;
-    display: block; /* Make it a block to separate from message */
+    display: block; 
 }
 
 .sender-name .timestamp {
@@ -302,7 +305,7 @@ body {
     margin: 0;
     color: #dcddde;
     line-height: 1.4;
-    word-wrap: break-word; /* Wrap long words */
+    word-wrap: break-word; 
 }
 
 .chat-image {
@@ -315,7 +318,7 @@ body {
 .chat-input-area {
     display: flex;
     align-items: center;
-    background-color: #40444b; /* Input area background */
+    background-color: #40444b;
     padding: 15px 20px;
     margin: 15px;
     border-radius: 8px;
@@ -352,10 +355,10 @@ body {
     color: #8e9297;
 }
 
-/* Right Sidebar (Chat Info) */
+
 .right-sidebar {
     width: 250px;
-    background-color: #2f3136; /* Same as middle column */
+    background-color: #2f3136; 
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -414,23 +417,23 @@ body {
 .member-list {
     margin-top: 15px;
     flex-grow: 1;
-    overflow-y: auto; /* Scroll for members */
+    overflow-y: auto;
     padding-right: 5px;
 }
 
-/* Custom scrollbar for member-list */
+
 .member-list::-webkit-scrollbar {
     width: 8px;
 }
 
 .member-list::-webkit-scrollbar-track {
-    background: #2f3136; /* Dark background for track */
+    background: #2f3136; 
 }
 
 .member-list::-webkit-scrollbar-thumb {
-    background-color: #40444b; /* Darker thumb */
+    background-color: #40444b; 
     border-radius: 4px;
-    border: 2px solid #2f3136; /* Border to match background */
+    border: 2px solid #2f3136;
 }
 
 .member-item {
@@ -465,50 +468,50 @@ body {
 }
 @media (max-width: 768px) {
     .chat-container {
-        flex-direction: column; /* Stack columns vertically */
+        flex-direction: column;
+         
     }
 
     .left-sidebar {
-        width: 100%; /* Full width for the sidebar */
-        height: auto; /* Allow height to adjust */
-        flex-direction: row; /* Icons might go horizontal */
+        width: 100%; 
+        height: auto; 
+        flex-direction: row; 
         justify-content: space-around;
         padding: 10px;
-        box-shadow: none; /* Adjust shadow for top/bottom */
-        position: static; /* No longer needs absolute positioning for bottom icons */
+        box-shadow: none; 
+        position: static; 
     }
 
     .bottom-icons {
-        position: static; /* Reset positioning */
+        position: static; 
         flex-direction: row;
         gap: 20px;
     }
 
     .middle-column {
-        width: 100%; /* Full width */
+        width: 100%; 
         border-right: none;
-        border-bottom: 1px solid #202225; /* Add a bottom border */
+        border-bottom: 1px solid #202225; 
     }
 
     .right-sidebar {
-        display: none; /* Hide the right sidebar by default on small screens */
-        /* Or make it a toggleable overlay */
-        width: 100%; /* If toggled open, full width */
+        display: none; 
+        width: 100%;
     }
 
     .main-chat-area {
-        width: 100%; /* Full width */
+        width: 100%; 
     }
 
-    /* Further adjustments for text size, padding etc. */
+  
     .chat-item img, .message-group img {
-        width: 35px; /* Smaller avatars */
+        width: 35px; 
         height: 35px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Even smaller adjustments for mobile phones */
+  
     .search-bar input {
         font-size: 12px;
     }
