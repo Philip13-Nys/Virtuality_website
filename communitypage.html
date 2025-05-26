@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page</title>
+    <link rel="stylesheet" href="communitypage.css">
+    <link rel="icon" href="Virtuality.png" type="Image/svg+xml">
+</head>
+<body>
+ 
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <a href="newsfeed.html">Home</a>
+        <a href="groups.html">Community Groups</a>
+        <a href="live.html">Live Events</a>
+        <a href="booths.html">Company Booths</a>
+
+        <div class="settings">  
+            <a href ="setting.html">Setting</a>
+            <a href ="about.html">About us</a>
+            <a href ="index.html">Log out</a>
+        </div>
+     </div>
+    <header>
+        <div class="container">
+            <h1>Information Technology Group</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#members">Members</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Connecting Our Community</h2>
+                <p>Welcome to our vibrant community group! We aim to foster connections, share ideas, and make a positive impact.</p>
+                <a href="#events" class="btn">Join Our Next Event</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We are a passionate group of individuals dedicated to learn and manage the technology, software, networks, etc. for a better future.</p>
+                <p>Our activities include workshops, social gatherings, volunteering opportunities, and open discussions. We welcome everyone to participate and contribute!</p>
+            </div>
+        </section>
+
+        <section id="events" class="events-section">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="event-grid">
+                    <div class="event-card">
+                        <h3>Pa-raffle ni Cunag</h3>
+                        <p><strong>Date:</strong> July 15, 2025</p>
+                        <p><strong>Time:</strong> 6:00 PM - 9:00 PM</p>
+                        <p>Hindi ko alam ilalagay!</p>
+                    </div>
+                    <div class="event-card">
+                        <h3>Birthday ko</h3>
+                        <p><strong>Date:</strong> July 2, 2025</p>
+                        <p><strong>Time:</strong> 9:00 AM - 12:00 PM</p>
+                        <p>Batiin niyo online.</p>
+                    </div>
+                    <div class="event-card">
+                        <h3>Sharing tips</h3>
+                        <p><strong>Date:</strong> June 20, 2025</p>
+                        <p><strong>Time:</strong> 7:00 PM - 8:30 PM</p>
+                        <p>Discuss about the work field.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="members" class="members-section">
+            <div class="container">
+                <h2>Our Members</h2>
+                <p>We're proud of our diverse and growing community! While we don't list individual member profiles here for privacy, we encourage everyone to join our discussions and events to connect with fellow members.</p>
+                <p>Interested in becoming a member? <a href="#contact">Contact us</a> for more details!</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions or want to get involved? We'd love to hear from you!</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <p>You can also find us on social media:</p>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Community Group Name. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+        }
+        function toggleRightSidebar() {
+        const sidebar = document.getElementById('rightSidebar');
+        sidebar.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
