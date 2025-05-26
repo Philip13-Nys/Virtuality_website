@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="terms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="terms-container">
+        <h2 class="terms-title">Terms and Conditions</h2>
+            <p>Please read these terms and conditions ("terms and conditions", "terms") carefully before using the Virtuality website ("website", "service") operated by Virtuality ("us", "we", "our").</p>
+        <div class="terms-content">
+            <h3>1. CONDITIONS OF USE</h3>
+            <p>By using this website, you certify that you have read and reviewed this Agreement and that you agree to comply with its terms. If you do not want to be bound by the terms of this Agreement, you are advised to stop using the website accordingly. Virtuality only grants use and access of this website, its products, and its services to those who have accepted its terms. </p>
+            
+            <h3>2. PRIVACY POLICY</h3>
+            <p>Before you continue using our website, we advise you to read our privacy policy regarding our user data collection and security practices. It will help you better understand our procedures.</p>
+
+            <h3>3. AGE RESTRICTION</h3>
+            <p>You must be at least 18+ (eighteen) years of age and above before you can use this website. By using this website, you warrant that you are at least 18 years of age and may legally adhere to this Agreement. Virtuality assumes no responsibility for liabilities related to age misrepresentation.</p>
+
+            <h3>4. INTELECTUAL PROPERTY</h3>
+            <p>You agree that all materials, products, and services provided on this website are the property of Virtuality, its affiliates, partners, employees, developers, and licensors including all copyrights, trademarks, trade secrets, patents, and other intellectual property. You also agree that you will not reproduce or redistribute the Virtuality’s intellectual property in any way, including electronic, digital, or new trademark registrations.</p>
+            <p>You grant Virtuality a royalty-free and non-exclusive license to display, use, copy, transmit, and broadcast the content you upload and publish. For issues regarding intellectual property claims, you should contact the company to come to an agreement.</p>
+
+            <h3>5. USER ACCOUNTS</h3>
+            <p>As a user of this website, you may be asked to register with us and provide private information. You are responsible for ensuring the accuracy of this information, and you are responsible for maintaining the safety and security of your identifying information. You are also responsible for all activities that occur under your account or password.</p>
+            <p>If you think there are any possible issues regarding the security of your account on the website, inform us immediately so we may address them accordingly.</p>
+
+            <h3>6. APPLICABLE LAW</h3>
+            <p>By visiting this website, you agree that the laws of the Republic of the Philippines, without regard to principles of conflict laws, will govern these terms and conditions, or any dispute of any sort that might come between Virtuality and you, or its business partners and associates.</p>
+
+            <h3>7. DISPUTES</h3>
+            <p>You agree to indemnify Virtuality and its affiliates and hold Virtuality harmless against legal claims and demands that may arise from your use or misuse of our services. We reserve the right to select our own legal counsel.</p>
+
+            <h3>8. LIMITATION ON LIABILITY</h3>
+            <p>Virtuality is not liable for any damages that may occur to you as a result of your misuse of our website. Virtuality reserves the right to edit, modify, and change this Agreement at any time. We shall let our users know of these changes through electronic mail. This Agreement is an understanding between Virtuality and the user, and this supersedes and replaces all prior agreements regarding the use of this website.</p>
+
+        </div>
+
+        <div class="terms-agreement">
+            <input type="checkbox" id="agreeTerms" name="agreeTerms">
+            <label for="agreeTerms">I have read and agree to the <a href="#">Terms and Conditions</a></label>
+        </div>
+        <div class="buttons" disabled>
+            <a href="index.html">
+                <button type="button">Continue <i class="fas fa-arrow-right"></i></button>
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+      
+        const agreeCheckbox = document.getElementById('agreeTerms');
+        const buttons = document.querySelector('.buttons');
+
+        agreeCheckbox.addEventListener('change', function() {
+            buttons.disabled = !this.checked;
+        });
+    </script>
+</body>
+</html>

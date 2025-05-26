@@ -1,0 +1,360 @@
+
+:root {
+    --primary-green: #5dbc50; 
+    --light-green: #a2e09a;
+    --text-dark: #333;
+    --text-light: #666;
+    --card-background: #fff;
+    --body-bg: #f0f0f0;
+    --border-color: #eee;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius-main: 25px;
+    --border-radius-card: 20px;
+    --bullet-green: #5dbc50;
+    --bullet-orange: #ff9800;
+    --bullet-blue: #2196f3;
+}
+
+/* Basic Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--body-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; 
+}
+
+.pricing-container {
+    display: flex;
+    gap: 30px;
+    max-width: 900px; 
+    width: 100%;
+    align-items: stretch; 
+}
+
+
+.card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 10px 20px var(--shadow-color);
+    padding: 30px;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/* Left Card - Our Packages */
+.left-card {
+    position: relative;
+    overflow: hidden; 
+}
+
+.card-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-subtitle {
+    font-size: 0.9em;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.tab-switcher {
+    display: flex;
+    justify-content: center;
+    background-color: var(--body-bg);
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+    color: var(--text-light);
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+.tab-button.active {
+    background-color: var(--primary-green);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.package-list {
+    flex-grow: 1; 
+    margin-bottom: 30px;
+}
+
+.package-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.package-item:last-child {
+    border-bottom: none;
+}
+
+.package-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.package-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid;
+}
+
+.green-bullet { border-color: var(--bullet-green); }
+.orange-bullet { border-color: var(--bullet-orange); }
+.blue-bullet { border-color: var(--bullet-blue); }
+
+.package-name {
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.package-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.package-arrow {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 0 5px;
+    transition: color 0.2s ease;
+}
+
+.package-arrow:hover {
+    color: var(--primary-green);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #5dbc50;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.buttons a{
+  text-decoration: none;
+  color: black;
+  margin-top: 30px;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .card-title {
+        font-size: 1.6em;
+    }
+
+    .card-subtitle {
+        font-size: 0.85em;
+        margin-bottom: 20px;
+    }
+
+    .tab-switcher {
+        margin-bottom: 25px;
+    }
+
+    .package-item {
+        padding: 12px 0;
+    }
+
+    .package-name {
+        font-size: 0.95em;
+    }
+
+    .package-price {
+        font-size: 1.1em;
+    }
+
+    .custom-header-bg {
+        padding: 25px;
+    }
+
+    .custom-package-title {
+        font-size: 1.4em;
+    }
+
+    .custom-price {
+        font-size: 2.4em;
+    }
+
+    .feature-list {
+        padding: 25px;
+    }
+
+    .feature-item {
+        margin-bottom: 20px;
+    }
+
+    .feature-text h3 {
+        font-size: 1em;
+    }
+
+    .feature-text p {
+        font-size: 0.8em;
+    }
+
+    .btn {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    .buy-package-btn {
+        margin: 0 25px 25px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.4em;
+    }
+
+    .card-subtitle {
+        font-size: 0.8em;
+        margin-bottom: 15px;
+    }
+
+    .tab-button {
+        padding: 8px 10px;
+        font-size: 0.8em;
+    }
+
+    .package-details {
+        gap: 10px;
+    }
+
+    .package-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .package-name {
+        font-size: 0.9em;
+    }
+
+    .package-price {
+        font-size: 1em;
+    }
+
+    .custom-header-bg {
+        padding: 20px;
+    }
+
+    .custom-package-title {
+        font-size: 1.2em;
+    }
+
+    .custom-price {
+        font-size: 2em;
+    }
+
+    .feature-list {
+        padding: 20px;
+    }
+
+    .feature-item {
+        margin-bottom: 15px;
+    }
+
+    .feature-text h3 {
+        font-size: 0.9em;
+    }
+
+    .feature-text p {
+        font-size: 0.75em;
+    }
+
+    .switch {
+        width: 40px;
+        height: 22px;
+    }
+
+    .slider:before {
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(18px);
+        -ms-transform: translateX(18px);
+        transform: translateX(18px);
+    }
+
+    .slider.round {
+        border-radius: 22px;
+    }
+
+    .btn {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+
+    .buy-package-btn {
+        margin: 0 20px 20px 20px;
+    }
+}

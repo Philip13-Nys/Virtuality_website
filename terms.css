@@ -1,0 +1,247 @@
+/* Variables for Easy Customization */
+:root {
+    --primary-color: #5dbc50; /* The requested green color */
+    --text-dark: #333;
+    --text-light: #666;
+    --background-light: #f4f7f6;
+    --card-background: #ffffff;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius-main: 10px;
+}
+
+/* Basic Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* Add some padding for smaller screens */
+}
+
+.terms-container {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    width: 100%;
+    max-width: 700px; /* Max width for the entire container */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.terms-title {
+    font-size: 2em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.terms-content {
+    height: 400px; /* Fixed height for scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #fcfcfc; /* Slightly different background for content */
+    font-size: 0.95em;
+    line-height: 1.7;
+}
+
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari) */
+.terms-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terms-content::-webkit-scrollbar-track {
+    background: var(--background-light);
+    border-radius: 10px;
+}
+
+.terms-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    border: 2px solid var(--background-light);
+}
+
+.terms-content h3 {
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.terms-content p {
+    margin-bottom: 15px;
+}
+
+.terms-content ul {
+    list-style: disc inside;
+    margin-bottom: 15px;
+    padding-left: 20px; /* Indent list items */
+}
+
+.terms-content ul li {
+    margin-bottom: 5px;
+}
+
+.terms-agreement {
+    display: flex;
+    align-items: flex-start; /* Align checkbox to the top of text */
+    margin-bottom: 25px;
+}
+
+.terms-agreement input[type="checkbox"] {
+    /* Basic styling for checkbox, browser default is usually fine */
+    min-width: 20px; /* Ensure it's not too small */
+    min-height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: var(--primary-color); /* Changes checkbox color in modern browsers */
+}
+
+.terms-agreement label {
+    font-size: 1em;
+    color: var(--text-dark);
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.terms-agreement label a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.terms-agreement label a:hover {
+    color: #4cae44; /* Slightly darker green on hover */
+    text-decoration: none;
+}
+
+
+.buttons:disabled {
+    background-color: #cccccc; /* Greyed out when disabled */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.buttons a{
+  text-decoration: none;
+  color: black;
+  margin-top: 30px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 25px;
+        max-width: 90%; /* More flexible width on tablets */
+    }
+
+    .terms-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .terms-content {
+        height: 350px; /* Slightly shorter on tablets */
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .terms-content h3 {
+        font-size: 1.1em;
+    }
+
+    .terms-agreement label {
+        font-size: 0.95em;
+    }
+
+    .submit-button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .terms-container {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .terms-title {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .terms-content {
+        height: 300px; /* Shorter on mobile */
+        padding: 12px;
+        font-size: 0.85em;
+    }
+
+    .terms-content h3 {
+        font-size: 1em;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+
+    .terms-content ul {
+        padding-left: 15px;
+    }
+
+    .terms-agreement {
+        flex-direction: row; /* Keep checkbox and label in a row */
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .terms-agreement input[type="checkbox"] {
+        min-width: 18px;
+        min-height: 18px;
+        margin-right: 8px;
+    }
+
+    .terms-agreement label {
+        font-size: 0.9em;
+    }
+
+    .submit-button {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+}
