@@ -1,0 +1,511 @@
+/* Basic Reset & Body Styles */
+:root {
+    --primary-color: #5dbc50;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --light-text-color: #666;
+    --border-color: #ddd;
+    --background-light: #f4f7f6;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar nav ul {
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 25px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+/* Main Content Area */
+.content-area {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    flex: 1; /* Allows main content to grow and push footer down */
+}
+
+.sidebar {
+    flex: 0 0 250px; /* Fixed width for sidebars on larger screens */
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    padding: 20px;
+    height: fit-content; /* Adjust height based on content */
+}
+
+.left-sidebar {
+    order: 1;
+}
+
+.right-sidebar {
+    order: 3;
+}
+
+.feed-posts {
+    flex: 1; /* Takes up remaining space */
+    order: 2;
+    min-width: 0; /* Important for flex items to prevent overflow with long content */
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar ul li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar .btn-join {
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin-left: auto; /* Pushes button to the right */
+}
+
+.sidebar .btn-join:hover {
+    background-color: #27ae60;
+}
+
+/* Create Post Widget */
+.create-post-widget {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.create-post-widget textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.create-post-widget .post-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.create-post-widget .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.create-post-widget .btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.create-post-widget .btn-post {
+    background-color: var(--secondary-color);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.create-post-widget .btn-post:hover {
+    background-color: #27ae60;
+}
+
+/* Post Card */
+.post-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-header .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.post-meta h4 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.post-meta .timestamp {
+    font-size: 0.85em;
+    color: var(--light-text-color);
+}
+
+.post-meta .timestamp a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.post-content p {
+    margin-bottom: 15px;
+}
+
+.post-content .post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.post-actions .action-btn {
+    background: none;
+    border: none;
+    color: var(--light-text-color);
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.post-actions .action-btn:hover {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+}
+
+/* Comments Section */
+.comments-section {
+    border-top: 1px solid var(--border-color);
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.comment .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    flex-shrink: 0; /* Prevent avatar from shrinking */
+}
+
+.comment-content {
+    background-color: var(--background-light);
+    padding: 10px 15px;
+    border-radius: 15px;
+    flex-grow: 1;
+}
+
+.comment-content strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.9em;
+}
+
+.comment-content p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.new-comment-input {
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.new-comment-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-family: inherit;
+}
+
+.new-comment-input button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+.new-comment-input button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 20px;
+}
+
+.footer ul li a {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .content-area {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: auto; /* Allow sidebars to take full width */
+        width: 100%; /* Ensure they span full width */
+        margin-bottom: 20px;
+    }
+
+    .left-sidebar, .right-sidebar {
+        order: unset; /* Reset order for smaller screens */
+    }
+
+    .left-sidebar {
+        margin-bottom: 0; /* No extra margin if sidebar is below main content */
+    }
+
+    .feed-posts {
+        order: unset;
+        margin-top: 0;
+    }
+
+    .navbar nav ul {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav ul li {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .navbar nav ul li {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+
+    .navbar .logo {
+        font-size: 1.5em;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .post-card {
+        padding: 15px;
+    }
+
+    .post-actions {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .post-actions .action-btn {
+        flex: 1 1 auto; /* Allow buttons to wrap and share space */
+        min-width: 120px;
+    }
+
+    .new-comment-input {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .new-comment-input button {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .footer ul {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 0;
+    }
+
+    .create-post-widget .post-actions {
+        flex-direction: column;
+    }
+
+    .sidebar h3 {
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        justify-content: center;
+    }
+
+    .sidebar .btn-join {
+        margin-left: 0;
+    }
+}
