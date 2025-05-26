@@ -1,0 +1,448 @@
+/* Variables for Easy Customization */
+:root {
+    --primary-green: #5dbc50; /* The requested green color */
+    --light-green: #e9f5e8; /* A very light green for backgrounds */
+    --dark-green: #4cae44; /* Slightly darker green for hover states */
+    --text-dark: #333;
+    --text-light: #666;
+    --background-grey: #f4f7f6;
+    --card-background: #ffffff;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius-main: 15px;
+    --section-spacing: 40px;
+}
+
+/* Basic Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-grey);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-green);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dark-green);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Main Booth Container */
+.booth-container {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 8px 25px var(--shadow-color);
+    width: 100%;
+    max-width: 960px; /* Max width for the entire booth */
+    overflow: hidden; /* Ensures rounded corners on inner content */
+    padding-bottom: var(--section-spacing); /* Add some space at the bottom before footer */
+}
+
+/* Shared Section Styles */
+.booth-section {
+    padding: var(--section-spacing) 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.booth-section:first-of-type {
+    border-top: none; /* No top border for the first section after header/hero */
+}
+
+.booth-section h2 {
+    font-size: 2em;
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Header & Branding */
+.booth-header {
+    background-color: var(--primary-green);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top-left-radius: var(--border-radius-main);
+    border-top-right-radius: var(--border-radius-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.company-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.company-name {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.company-tagline {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.booth-hero {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    align-items: center;
+    justify-content: center;
+    padding: var(--section-spacing) 40px;
+    gap: 30px;
+    background-color: var(--light-green);
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px; /* Ensure content doesn't get too squished */
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: var(--text-light);
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px; /* Ensure image doesn't get too squished */
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-decoration: none; /* Ensure no underline on links acting as buttons */
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(91, 188, 80, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91, 188, 80, 0.4);
+}
+
+/* About Us Section */
+.about-us p {
+    text-align: center;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Offerings/Services Grid */
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.offering-card {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offering-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.offering-card i {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+.offering-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.offering-card p {
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+/* Resources Grid */
+.resources-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.resource-item {
+    background-color: var(--light-green);
+    color: var(--text-dark);
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.resource-item:hover {
+    background-color: var(--primary-green);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.resource-item:hover i {
+    color: #fff; /* Ensure icon also changes color on hover */
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(91, 188, 80, 0.2);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: var(--text-light);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: var(--primary-green);
+    margin-right: 8px;
+}
+
+
+/* Social Media */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: var(--text-light);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--primary-green);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.booth-footer {
+    background-color: var(--text-dark);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    border-bottom-left-radius: var(--border-radius-main);
+    border-bottom-right-radius: var(--border-radius-main);
+}
+
+button {
+  width: 130px;
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.button a{
+  text-decoration: none;
+  color: black;
+  margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .booth-header {
+        padding: 25px 15px;
+    }
+
+    .company-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .company-name {
+        font-size: 1.8em;
+    }
+
+    .company-tagline {
+        font-size: 0.9em;
+    }
+
+    .booth-hero {
+        padding: 25px 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .booth-section {
+        padding: 25px 15px;
+    }
+
+    .booth-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .offering-card {
+        padding: 20px;
+    }
+
+    .offering-card h3 {
+        font-size: 1.2em;
+    }
+
+    .offering-card p {
+        font-size: 0.85em;
+    }
+
+    .resource-item {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+
+    .form-group label,
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9em;
+    }
+
+    .contact-info p {
+        font-size: 1em;
+    }
+
+    .social-icon i {
+        font-size: 1.8em; /* Adjust icon size for social media */
+    }
+
+    .booth-footer {
+        padding: 15px;
+        font-size: 0.8em;
+    }
+}
